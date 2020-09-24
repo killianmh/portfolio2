@@ -29,7 +29,11 @@ a {
   color: #404143;
   font-weight: 700;
 }
-
+h1 {
+  font-size: 70px;
+  line-height: 75px;
+  margin: 0;
+}
 /* ============ Hero =============== */
 .hero {
   position: relative;
