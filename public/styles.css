@@ -25,7 +25,9 @@ body {
   font-weight: 400;
 }
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #404143;
+  font-weight: 700;
 }
 
 /* ============ Hero =============== */
@@ -62,11 +64,24 @@ a {
   background-color: #7765e3;
   transform-origin: top left;
 }
+.hero .scroll {
+  display: none;
+}
 
 @media (min-width: 1025px) {
   .hero .title {
     font-size: 70px;
     line-height: 75px;
+  }
+  .hero .scroll {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 60%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 
@@ -103,11 +118,15 @@ a {
   text-transform: uppercase;
   text-align: center;
 }
+#project-1 {
+  margin-bottom: 100px;
+}
 #project-1 .mobile {
   display: block;
   position: relative;
   background-color: #7765e3;
   overflow: hidden;
+  text-decoration: none;
 }
 #project-1 .mobile .overlay {
   position: absolute;
@@ -217,5 +236,32 @@ a {
     width: 100%;
     height: auto;
     vertical-align: middle;
+  }
+}
+
+.project#project-2 {
+  z-index: 4;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7765e3;
+}
+#project-2 {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+
+@media (min-width: 1025px) {
+  .project#project-2 {
+    justify-content: center;
+  }
+  #project-2 .social {
+    margin-right: 40px;
+    
   }
 }
