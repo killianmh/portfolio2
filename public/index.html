@@ -18,6 +18,7 @@
     <div class="hero first-transition">
       <div class="back">
         <div class="title">MATT KILLIAN</div>
+        <div class="scroll">( scroll )</div>
       </div>
       <div id="angle"></div>
     </div>
@@ -47,6 +48,14 @@
             <img src="images/project-1.jpg" alt="">
           </a>
         </div>
+      </div>
+    </div>
+    <div class="project" id="project-2">
+      <div class="social">
+        <a href="https://github.com/killianmh">Github</a>
+      </div>
+      <div class="contact">
+        killianmh@gmail.com
       </div>
     </div>
   </section>
@@ -136,16 +145,9 @@
         scenes[0] = new ScrollMagic.Scene({
           triggerElement: wrapper,
           triggerHook: "onLeave",
-          duration: "50%"
+          duration: "40%"
         })
         .setPin(wrapper)
-        .addIndicators({
-          name: "timeline",
-          colorTrigger: "white",
-          colorStart: "white",
-          colorEnd: "white",
-          indent: 0 
-        })
         .addTo(controller)
 
         // first transition affects hero and 1st slide
@@ -155,6 +157,13 @@
             offset: offset / 2
           })
           .setClassToggle(".first-transition", "active")
+          // .addIndicators({
+          //       name: "skinny child timeline",
+          //       colorTrigger: "white",
+          //       colorStart: "white",
+          //       colorEnd: "white",
+          //       indent: 250 
+          //   })
           .on("enter", function (e) {
             console.log('scroll magic enter')
             heroLeave()
@@ -168,13 +177,6 @@
             }, 500);
             
 					})
-          .addIndicators({
-            name: "child timeline",
-            colorTrigger: "red",
-            colorStart: "red",
-            colorEnd: "red",
-            indent: 40 
-          })
           .addTo(controller)
 
         for (let i = 1; i < length; i++) {
@@ -184,14 +186,13 @@
             offset: (i + 1) * (offset / 2)
           })
           .setClassToggle(panels[i], "active")
-          // .setClassToggle(".hero", "active")
-          .addIndicators({
-            name: "child timeline",
-            colorTrigger: "red",
-            colorStart: "red",
-            colorEnd: "red",
-            indent: 40 
-          })
+          // .addIndicators({
+          //       name: "skinny child timeline",
+          //       colorTrigger: "red",
+          //       colorStart: "red",
+          //       colorEnd: "red",
+          //       indent: 250 
+          //   })
           .addTo(controller)
         }
       }
