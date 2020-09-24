@@ -45,7 +45,7 @@
         </div>
         <div class="right">
           <a href="https://frombluetogreen.herokuapp.com/">
-            <img src="images/project-1.jpg" alt="">
+            <img src="images/project-1.jpg" alt="Screenshot of From Blue to Green webpage">
           </a>
         </div>
       </div>
@@ -71,13 +71,9 @@
       // animate angle on hero
       let angleDeg
       function heroAngle() {
-        console.log(window.innerWidth, window.innerHeight)
         let newWidth = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2))
-        console.log(newWidth)
         let angle = Math.asin(window.innerHeight / newWidth)
-        console.log(angle)
         let heightAngle = (Math.PI / 2) - angle
-        console.log(heightAngle)
         let newHeight = window.innerWidth
         document.getElementById("angle").style.cssText = "width: " + newWidth + "px; height: " + newHeight + "px; transform-origin: top left;"
         angleDeg = angle * (-180 / Math.PI)
@@ -115,7 +111,6 @@
            }
         } else {
           if (controller === null || controller === undefined) {
-            console.log('inniting slider')
             initSlider()
           }
         }
@@ -140,7 +135,6 @@
         let panels = document.getElementsByClassName("project")
         let length = document.getElementsByClassName("project").length
         let offset = window.innerHeight / 4
-        console.log(length, offset)
 
         scenes[0] = new ScrollMagic.Scene({
           triggerElement: wrapper,
@@ -165,11 +159,9 @@
           //       indent: 250 
           //   })
           .on("enter", function (e) {
-            console.log('scroll magic enter')
             heroLeave()
           })
           .on("leave", function (e) {
-            console.log('scroll magic leave')
             let wait
             clearTimeout(wait)
             wait = setTimeout(function(){
