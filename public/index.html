@@ -134,12 +134,12 @@
         let wrapper = document.getElementById("anim-wrapper")
         let panels = document.getElementsByClassName("project")
         let length = document.getElementsByClassName("project").length
-        let offset = window.innerHeight / 4
+        let offset = window.innerHeight / 2
 
         scenes[0] = new ScrollMagic.Scene({
           triggerElement: wrapper,
           triggerHook: "onLeave",
-          duration: "40%"
+          duration: "80%"
         })
         .setPin(wrapper)
         .addTo(controller)
